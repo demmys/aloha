@@ -1,0 +1,41 @@
+body{
+	background-color: #000000;
+}
+
+
+#whitequad{
+background-color: #FFFFFF;
+width: 75%;
+height: 300px;
+margin: auto auto;
+margin-top: 50px;
+padding: 5px;
+}
+
+
+
+#bluequad{
+background-color: #1b1464;
+width: 90%;
+height: 30px;
+margin: 5px auto 5px auto;
+}
+
+div#glayquad{
+background-color: #ffffcc;
+width: 150px;
+}
+
+#ab{
+position:absolute;
+font-color: #000000;
+font-family: Lucida MS ゴシック;
+font-style: 25px;
+}
+
+
+ 
+
+
+
+
