@@ -1,6 +1,6 @@
 <?php
 
-new $link('test.db', password, $sqliteerror);
+$link = sqlite_open('test.db', password, $sqliteerror);
 if (!$link) {
     die('接続失敗です'.$sqliteerror);
 }
