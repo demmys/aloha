@@ -2,10 +2,12 @@
 
 @-ms-viewport {width: device-width;}
 
-body {margin: 0;
-	font-family: '游ゴシック',YuGothic,'メイリオ',
-	'Hiragino Kaku Gothic Pro', sans-serif;
-	background-color: #000}
+body {
+    margin: 0;
+    font-family: '游ゴシック',YuGothic,'メイリオ',
+    'Hiragino Kaku Gothic Pro', sans-serif;
+    background-color: #000
+}
 
 /*ヘッダー*/
 .header		{padding: 20px;
