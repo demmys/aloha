@@ -1,5 +1,20 @@
+<<<<<<< HEAD
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<body>
+<form action = "touroku,php" method="post">
+–¼‘OF<input type="text" name="nam">
+Ê^F<input type="text" name="pic">
+ƒ^ƒCƒgƒ‹F<input type="text" name="tit">
+à–¾F<input type="text" name="info">
+<input type="submit" name="exec" value="“o˜^">
+</form>
+</body>
+</html>
+=======
 <html>
 <body>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
 <form action = "touroku,php" method="post">
 åå‰ï¼š<input type="text" name="nam">
 å†™çœŸï¼š<input type="text" name="pic">
@@ -9,3 +24,4 @@
 </form>
 </body>
 </html>
+>>>>>>> acd29bd585a9fa76922b03893ab736dae0b0bbd9
