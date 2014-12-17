@@ -28,8 +28,13 @@
             <h1>インターネット闇市＠SFC</h1>
         </header>
 
-        <section class="information-button">
-            <kamo></kamo>
+        <section ng-controller="KamosController">
+            <kamo ng-repeat="kamo in kamos"
+                  data-x="{{ kamo.x }}"
+                  data-y="{{ kamo.y }}"
+                  data-xstep="{{ kamo.xstep }}"
+                  data-ystep="{{ kamo.ystep }}">
+            </kamo>
         </section>
 
         <section class="link-button">

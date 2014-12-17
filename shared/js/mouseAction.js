@@ -1,9 +1,9 @@
-(function(){
+(function() {
     'use strict';
 
     var m = angular.module('mouseAction', []);
 
-    m.factory('Mouse', function(){
+    m.factory('Mouse', function() {
         return {
             mouseDowned: false,
             dragging: false,
@@ -11,16 +11,16 @@
         };
     });
 
-    m.directive('mouseArea', function(Mouse){
+    m.directive('mouseArea', function(Mouse) {
         return {
             restrict: 'A',
-            link: function($scope, $element){
+            link: function($scope, $element) {
                 // broadcast dragging information via Mouse model
-                $element.on('mousedown', function(){
+                $element.on('mousedown', function() {
                     $scope.$apply(Mouse.mouseDowned = true);
                 });
-                $element.on('mousemove', function(event){
-                    if(Mouse.mouseDowned){
+                $element.on('mousemove', function(event) {
+                    if(Mouse.mouseDowned) {
                         Mouse.mouseDowned = false;
                         Mouse.dragging = true;
                     }
@@ -30,8 +30,8 @@
                     });
                     event.preventDefault();
                 });
-                $element.on('mouseup mouseout', function(){
-                    $scope.$apply(function(){
+                $element.on('mouseup mouseout', function() {
+                    $scope.$apply(function() {
                         Mouse.mouseDowned = false;
                         Mouse.dragging = false;
                     });
@@ -40,7 +40,7 @@
         };
     });
 
-    m.directive('draggable', function(Mouse){
+    m.directive('draggable', function(Mouse) {
         return {
             restrict: 'A',
             scope: {
@@ -48,24 +48,24 @@
                 dragStartCallback: '&ondragstart',
                 dragEndCallback: '&ondragend'
             },
-            link: function($scope, $element, attr){
+            link: function($scope, $element, attr) {
                 // detect whether the dragging object is this or not
                 var mouseDowned = false, dragging = false;
 
-                $element.on('mousedown', function(){
+                $element.on('mousedown', function() {
                     mouseDowned = true;
                     $scope.$apply(Mouse.mouseDowned = true);
                     event.stopPropagation();
                 });
 
-                $element.on('mouseup', function(){
+                $element.on('mouseup', function() {
                     mouseDowned = false;
                 });
-                $scope.$watch(function(){
+                $scope.$watch(function() {
                     return Mouse.dragging;
-                }, function(parentDragging){
-                    if(!parentDragging){
-                        if(dragging){
+                }, function(parentDragging) {
+                    if(!parentDragging) {
+                        if(dragging) {
                             $scope.dragEndCallback({
                                 element: $element
                             });
@@ -75,10 +75,10 @@
                     }
                 });
 
-                $scope.$watch(function(){
+                $scope.$watch(function() {
                     return Mouse.point;
-                }, function(currentPoint, pastPoint){
-                    if(mouseDowned){
+                }, function(currentPoint, pastPoint) {
+                    if(mouseDowned) {
                         mouseDowned = false;
                         dragging = true;
                         $scope.dragStartCallback({
@@ -86,7 +86,7 @@
                             pastPoint: pastPoint
                         });
                     }
-                    if(dragging){
+                    if(dragging) {
                         $scope.dragCallback({
                             currentPoint: currentPoint,
                             pastPoint: pastPoint

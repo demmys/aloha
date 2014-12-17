@@ -9,36 +9,44 @@
             restrict: 'E',
             templateUrl: 'index.js/kamo/partial.html',
             replace: true,
-            scope: {},
-            compile: function($element, $attr) {
-                $element.css('left', '500px');
-                $element.css('top', '0px');
-                return function($scope, $element, $attr) {
-                    var dragging = false;
-                    var timer = $interval(function() {
-                        if(!dragging) {
-                            $element.css('left', (parseInt($element.css('left')) + 10) + 'px');
-                        }
-                    }, 100);
-                    var gap = {
-                        x: 0,
-                        y: 0
-                    };
+            scope: {
+                x: '@',
+                y: '@',
+                xstep: '@',
+                ystep: '@'
+            },
+            link: function($scope, $element, $attr) {
+                $element.css('left', $scope.x + 'px');
+                $element.css('top', $scope.y + 'px');
+                var dragging = false;
+                var xstep = Number($scope.xstep);
+                var ystep = Number($scope.ystep);
+                $interval(function() {
+                    if(!dragging) {
+                        var left = parseFloat($element.css('left'));
+                        var top = parseFloat($element.css('top'));
+                        $element.css('left', (left + xstep) + 'px');
+                        $element.css('top', (top + ystep) + 'px');
+                    }
+                }, 100);
+                var gap = {
+                    x: 0,
+                    y: 0
+                };
 
-                    $scope.startDrag = function(currentPoint, pastPoint) {
-                        gap = {
-                            x: currentPoint.x - parseInt($element.css('left')),
-                            y: currentPoint.y - parseInt($element.css('top'))
-                        };
-                        dragging = true;
+                $scope.startDrag = function(currentPoint, pastPoint) {
+                    gap = {
+                        x: currentPoint.x - parseInt($element.css('left')),
+                        y: currentPoint.y - parseInt($element.css('top'))
                     };
-                    $scope.endDrag = function() {
-                        dragging = false;
-                    };
-                    $scope.move = function(currentPoint, pastPoint) {
-                        $element.css('left', (currentPoint.x - gap.x) + 'px');
-                        $element.css('top', (currentPoint.y - gap.y) + 'px');
-                    };
+                    dragging = true;
+                };
+                $scope.endDrag = function() {
+                    dragging = false;
+                };
+                $scope.move = function(currentPoint, pastPoint) {
+                    $element.css('left', (currentPoint.x - gap.x) + 'px');
+                    $element.css('top', (currentPoint.y - gap.y) + 'px');
                 };
             }
         };
