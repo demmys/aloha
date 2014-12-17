@@ -1,183 +1,43 @@
-
 body {
-	margin: 0;
-	font-family: '游ゴシック',YuGothic,'メイリオ',
-	'Hiragino Kaku Gothic Pro', sans-serif;
-	background-color: #000
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/*ヘッダー*/
-.header {
-	padding: 20px;
-	background-color:#000;
-	text-align: center;
-}
-
-.header h1 {
-	margin: 0;
-	font-size: 20px;
-	line-height: 1;
-}
-
-.header h1 a {
-	color: #000;
-	text-decoration: none;
+header,footer {
+    text-align: center;
 }
 
 /*
-.header p {
-	margin: 8px 255 0 0;
-	font-size: 12px;
-	line-height: 1;
+ * kamo
+ */
+div.element-kamo {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background-image: url("img/kamo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
 }
-*/
-
-.header .logo {
-	max-width: 100%;
-	height: auto;
-	border: none;
+div.element-kamo:hover {
+    background-image: url("img/kamo_super.png");
 }
-
-
-/*メイン*/
-
-.entry {
-	padding:20px;
-	background-color: #000;
-	text-align: center;
-}
-
-.entry img {
-	max-width: 100%;
-	height:auto;
-	margin: 0 0 30px 0;
-	vertical-align: bottom;
+div.element-kamo>div {
+    width: 100%;
+    height: 100%;
 }
 
-.entry h4 {
-	margin: 0 0 20px 0;
-	font-size: 28px;
-	line-height: 1.2;
-	color: yellow;
+/*
+ * link-button
+ */
+section.link-button {
+    padding: 12% 0 12% 0;
+    text-align: center;
 }
-
-
-
-
-/* フッター */
-.footer	{
-	padding: 20px;
-	background-color: #000;
-}
-
-.footer p {
-	margin: 0 0 3px 0;
-	font-size: 12px;
-	line-height: 1.4;
-}
-
-.footer a {
-	color: #666;
-	text-decoration: none;
-}
-
-
-
-.footer .sns {
-	float:right;
-}
-
-.footer:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.footer	{
-	*zoom:1;
-}
-
-
-
-/*SNS*/
-
-.sns {
-	padding: 20px;
-	background-color: #000;
-}
-
-.sns ul 	{
-	margin: 0;
-	padding: 0;
-	font-size: 14px;
-	line-height: 1.4;
-	list-style: none;
-}
-
-.sns li a 	{
-	display: block;
-	padding: 10px;
-	color: #000;
-	text-align: center;
-	text-decoration: none;
-}
-
-.sns li a:hover {
-	background-color: #eee;
-}
-
-.sns li a span {
-	display: block;
-	text-indent: 0;
-}
-
-.sns li a i {
-	font-size: 40px;
-	color: #e16;
-}
-
-.sns li a:hover i {
-	color: #f80;
-}
-
-.sns li {
-	float:left;
-	width:100px;
-}
-
-.sns ul:after {
-	content:"";
-	display: block;
-	clear: both;
-}
-
-.sns ul 	{
-	*zoom:1;
-}
-
-.fa	{
-	*zoom:1;
-}
-
-.fa-twitter-square {
-	*zoom: expression(this.innerHTML = '&#xf081;');
-}
-
-.fa-facebook-square {
-	*zoom: expression(this.innerHTML = '&#xf082;');
-}
-
-
-.counter {
-	color:#0f0;
-}
-
-.about {
-	float: right;
-	color:#0f0;
-} 
-
-.text {
-	text-align:center;
-	color:#0f0;
+img {
+    width: 260px;
+    margin: 0 40px;
 }
