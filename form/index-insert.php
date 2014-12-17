@@ -3,6 +3,7 @@
     ////データベースの名前はtest.sqlite3
     ////テーブルの名前はtest
     ////カルムはname picture title info
+    ///それぞれの変数は$nam $pic $tit $inf
     
     
     
@@ -15,10 +16,10 @@
     
     
     
-    $db->query("INSERT INTO test (name) VALUES ('foo')");
-    $db->query("INSERT INTO test (picture) VALUES ('baz')");
-    $db->query("INSERT INTO test (title) VALUES ('hoge')");
-    $db->query("INSERT INTO test (info) VALUES ('foge')");
+    $db->query("INSERT INTO test (name) VALUES ('$nam')");
+    $db->query("INSERT INTO test (picture) VALUES ('$pic')");
+    $db->query("INSERT INTO test (title) VALUES ('$tit')");
+    $db->query("INSERT INTO test (info) VALUES ('inf')");
     
     
     
