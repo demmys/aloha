@@ -19,7 +19,7 @@
     $db->query("INSERT INTO test (name) VALUES ('$nam')");
     $db->query("INSERT INTO test (picture) VALUES ('$pic')");
     $db->query("INSERT INTO test (title) VALUES ('$tit')");
-    $db->query("INSERT INTO test (info) VALUES ('inf')");
+    $db->query("INSERT INTO test (info) VALUES ('$inf')");
     
     
     
