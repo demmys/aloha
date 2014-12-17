@@ -19,20 +19,12 @@
     $db->query("INSERT INTO test (name) VALUES ('$nam')");
     $db->query("INSERT INTO test (picture) VALUES ('$pic')");
     $db->query("INSERT INTO test (title) VALUES ('$tit')");
-<<<<<<< HEAD
-    $db->query("INSERT INTO test (info) VALUES ('inf')");
-=======
     $db->query("INSERT INTO test (info) VALUES ('$inf')");
->>>>>>> 75296495e5aab8f7533dca2eb623b40db3981b20
-    
+
     
     
     $db->close();
     
     print('切断しました。<br>');
-    
-<<<<<<< HEAD
+
     ?>
-=======
-    ?>
->>>>>>> 75296495e5aab8f7533dca2eb623b40db3981b20
