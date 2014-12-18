@@ -1,43 +1,33 @@
 body{
-	background-color: #000000;
+    background-color: #000000;
 }
 
-
-#whitequad{
-background-color: #FFFFFF;
-width: 75%;
-height: 400px;
-margin: auto auto;
-margin-top: 50px;
-padding: 5px;
+.classic-window {
+    background-color: #FFFFFF;
+    width: 75%;
+    height: 400px;
+    margin: auto auto;
+    margin-top: 50px;
+    padding: 5px;
 }
 
-
-
-#bluequad{
-background-color: #1b1464;
-width: 98%;
-height: 30px;
-margin: 5px auto 5px auto;
+.classic-window>header {
+    background-color: #1b1464;
+    width: 98%;
+    height: 30px;
+    margin: 5px auto 5px auto;
 }
 
-#glayquad{
-background-color: #EEEEEE;
-width: 98%;
-height: 80%;
-margin: 5px auto 5px auto;
+.classic-window>section {
+    background-color: #EEEEEE;
+    width: 98%;
+    height: 80%;
+    margin: 5px auto 5px auto;
 }
 
-p{
-color: #1b1464;
-font-size: 40px;
-text-align: middle;
-vertical-align: middle;
+.classic-window>section>p {
+    color: #1b1464;
+    font-size: 40px;
+    text-align: middle;
+    vertical-align: middle;
 }
-
-
- 
-
-
-
-
