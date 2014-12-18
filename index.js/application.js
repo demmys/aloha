@@ -28,6 +28,12 @@
 
     m.controller('KamosController', function($scope, Kamos) {
         $scope.kamos = Kamos.generate(10);
+
+        $scope.openInfo = function() {
+        };
+    });
+
+    m.controller('InformationController', function($scope) {
     });
 
 }());

@@ -16,6 +16,7 @@
         <!-- JavaScripts -->
         <script type="text/javascript" src="lib/angular.min.js"></script>
         <script type="text/javascript" src="shared/mouseAction.js"></script>
+        <script type="text/javascript" src="shared/classical-window/element.js"></script>
         <script type="text/javascript" src="index.js/kamo/element.js"></script>
         <script type="text/javascript" src="index.js/application.js"></script>
 
@@ -28,12 +29,13 @@
             <h1>インターネット闇市＠SFC</h1>
         </header>
 
-        <section ng-controller="KamosController">
+        <section class="kamo-ike" ng-controller="KamosController">
             <kamo ng-repeat="kamo in kamos"
                   data-x="{{ kamo.x }}"
                   data-y="{{ kamo.y }}"
                   data-xstep="{{ kamo.xstep }}"
-                  data-ystep="{{ kamo.ystep }}">
+                  data-ystep="{{ kamo.ystep }}"
+                  data-onclick="openInfo()">
             </kamo>
         </section>
 
@@ -42,8 +44,15 @@
             <a href="gallery"><img src="img/gallery_button.png" /></a>
         </section>
 
+        <section class="info-window" ng-controller="InformationController" ng-hide="true">
+            <classical-window>
+            </classical-window>
+        </section>
+
+        <!--
         <footer>
             <p>あなたは<span>n</span>番目の訪問者です。</p>
         </footer>
+        -->
     </body>
 </html>

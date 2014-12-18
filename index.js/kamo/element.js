@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var m = angular.module('kamo', ['mouseAction']);
+    var m = angular.module('kamo', ['mouseAction', 'classicalWindow']);
 
 
     m.directive('kamo', function($interval) {
@@ -13,7 +13,8 @@
                 x: '@',
                 y: '@',
                 xstep: '@',
-                ystep: '@'
+                ystep: '@',
+                onClick: '&onclick'
             },
             link: function($scope, $element, $attr) {
                 $element.css('left', $scope.x + 'px');
@@ -48,6 +49,10 @@
                     $element.css('left', (currentPoint.x - gap.x) + 'px');
                     $element.css('top', (currentPoint.y - gap.y) + 'px');
                 };
+
+                $element.on('click', function() {
+                    $scope.onClick();
+                });
             }
         };
     });

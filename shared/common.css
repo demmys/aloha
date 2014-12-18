@@ -9,3 +9,11 @@ body {
 h1,p,ul {
     margin: 0;
 }
+
+/*
+ * classical-window
+ */
+div.element-classical-window {
+    width: 80%;
+    margin: 5em auto;
+}
