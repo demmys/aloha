@@ -1,0 +1,115 @@
+body{
+    background-color: #FFFFFF;
+}
+
+
+.textbox { 
+    border: 3px inset #b3b3b3; 
+    height: 100;
+    outline:0; 
+    height:30px; 
+    width: 80%; 
+    padding: 2px;
+  } 
+
+.textbox-info{
+
+    border: 3px inset #b3b3b3; 
+    height: 100;
+    outline:0; 
+    height:250px; 
+    width: 100%;
+}
+
+.name{
+    width: 80px;
+    font-family: "ＭＳ ゴシック",sans-serif;
+    border-style: solid;
+    border-width: 3px 4px 3px 4px;
+    border-color: #c0c0c0 #808080 #808080 #c0c0c0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.title{
+    width:80px;
+    font-family: "ＭＳ ゴシック",sans-serif;
+    border-style: solid;
+    border-width: 3px 4px 3px 4px;
+    border-color: #c0c0c0 #808080 #808080 #c0c0c0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+.photo{
+    width: 80px;
+    font-family: "ＭＳ ゴシック",sans-serif;
+    border-style: solid;
+    border-width: 3px 4px 3px 4px;
+    border-color: #c0c0c0 #808080 #808080 #c0c0c0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+
+.classic-window {
+    background-color: #b3b3b3;
+    width: 75%;
+    height: 500px;
+    margin: auto auto;
+    margin-top: 50px;
+    border-style: ridge;
+    border-color: #FFFFFF;
+    
+}
+
+.classic-window>header {
+    background-color: #1b1464;
+    width: 99%;
+    height: 30px;
+    margin: 5px auto 5px auto;
+}
+
+.classic-window>section {
+    background-color: #b3b3b3;
+    width: 98%;
+    height: 80%;
+    margin: 5px auto 5px auto;
+
+}
+
+.classic-window>section:hover {
+    background-color: #b3b3b3;
+    width: 98%;
+    height: 80%;
+    margin: 5px auto 5px auto;
+
+}
+
+.classic-window>section>p {
+    color: #000000;
+    font-size: 40px;
+    text-align: middle;
+    vertical-align: middle;
+}
+
+.classic-window>section>p:hover {
+    color: #FFD700;
+    font-size: 40px;
+    text-align: middle;
+    vertical-align: middle;
+}
+
+#close-button {
+    background-color: #CCCCCC;
+    width: 20px;
+    height: 20px;
+    border-style: outset;
+    float: right;
+    margin: 1px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+}
