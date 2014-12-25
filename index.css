@@ -9,6 +9,15 @@ header,footer {
 }
 
 /*
+ * header
+ */
+header>h1>img {
+    margin: 0;
+    width: 90%;
+    max-width: 825px;
+}
+
+/*
  * kamo-ike
  */
 section.kamo-ike {
@@ -42,7 +51,6 @@ div.element-kamo>div {
  * link-button
  */
 section.link-button {
-    padding: 12% 0 12% 0;
     text-align: center;
 }
 img {
